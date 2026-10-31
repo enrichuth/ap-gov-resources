@@ -1,0 +1,434 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+
+<title>AP Gov Study Guide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&family=Source+Code+Pro:wght@400;500&display=swap">
+<style>
+/* AP Gov — constitutional document aesthetic */
+:root {
+  --bg: #FFFFFF; --bg2: #EBE8E0; --bg3: #DDD9CE;
+  --fg: #14120C; --fg2: #60594E; --rule: #C8C2B0;
+  --navy: #1C2E4A; --red: #7A1818; --gold: #8A6010;
+  --green: #1A4A28; --blue: #164478;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0C0B08; --bg2: #141210; --bg3: #1C1A14;
+    --fg: #EAE6DC; --fg2: #9A9488; --rule: #342E22;
+    --navy: #7AAACE; --red: #C05050; --gold: #D4A040;
+    --green: #60A870; --blue: #6090C8;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0C0B08; --bg2: #141210; --bg3: #1C1A14;
+  --fg: #EAE6DC; --fg2: #9A9488; --rule: #342E22;
+  --navy: #7AAACE; --red: #C05050; --gold: #D4A040;
+  --green: #60A870; --blue: #6090C8;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 14px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.page { max-width: 900px; margin: 0 auto; padding-block: 44px 80px; }
+
+/* COVER */
+.cover {
+  border: 2px solid var(--fg);
+  border-top-width: 6px; border-top-color: var(--navy);
+  padding: 24px 28px 20px; margin-bottom: 36px;
+  display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center;
+}
+@media (max-width: 480px) { .cover { grid-template-columns: 1fr; } }
+.cover h1 { font-family: 'Libre Baskerville', Georgia, serif; font-size: clamp(20px, 3.5vw, 34px); font-weight: 700; line-height: 1.1; text-wrap: balance; }
+.cover-sub { font-family: 'Source Code Pro', monospace; font-size: 10px; color: var(--fg2); margin-top: 8px; letter-spacing: .06em; }
+.cover-seal { background: var(--navy); color: #EDE9DC; font-family: 'Source Code Pro', monospace; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; padding: 10px 14px; text-align: center; line-height: 1.8; flex-shrink: 0; }
+
+/* HOW TO USE */
+.how-box { background: var(--bg2); border: 1px solid var(--rule); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; padding: 12px 16px; margin-bottom: 36px; font-size: 12.5px; color: var(--fg2); line-height: 1.6; }
+.how-box strong { color: var(--fg); }
+
+/* UNIT CARD */
+.unit-card { border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; margin-bottom: 22px; }
+.unit-hd { padding: 12px 18px; display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; }
+.unit-num { font-family: 'Source Code Pro', monospace; font-size: 10px; letter-spacing: .1em; color: rgba(255,255,255,.75); }
+.unit-title { font-family: 'Libre Baskerville', serif; font-size: clamp(14px, 2.2vw, 17px); font-weight: 700; color: #EDE9DC; }
+.unit-pct { font-family: 'Source Code Pro', monospace; font-size: 10px; background: rgba(255,255,255,.15); padding: 3px 8px; color: rgba(255,255,255,.9); border-radius: 2px; white-space: nowrap; }
+.hd-navy { background: var(--navy); }
+.hd-red { background: var(--red); }
+.hd-green { background: var(--green); }
+.hd-blue { background: var(--blue); }
+.hd-gold { background: var(--gold); }
+
+.unit-body { background: var(--bg2); padding: 14px 18px; }
+.unit-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 520px) { .unit-cols { grid-template-columns: 1fr; } }
+
+.unit-col-title { font-family: 'Source Code Pro', monospace; font-size: 9px; text-transform: uppercase; letter-spacing: .12em; color: var(--fg2); margin-bottom: 8px; }
+.bullet-list { list-style: none; }
+.bullet-list li { font-size: 12.5px; padding: 3px 0; border-bottom: 1px dotted var(--rule); line-height: 1.45; }
+.bullet-list li:last-child { border-bottom: none; }
+.bullet-list li::before { content: "·"; margin-right: 7px; color: var(--fg2); }
+
+/* TERMS STRIP */
+.terms { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--rule); }
+.term { font-family: 'Source Code Pro', monospace; font-size: 10px; background: var(--bg3); border: 1px solid var(--rule); padding: 3px 8px; border-radius: 2px; color: var(--fg2); }
+
+/* EXAM FOCUS BOX */
+.focus { background: var(--bg); border: 1px solid var(--rule); border-top: 2px solid var(--navy); border-radius: 0 0 4px 4px; padding: 12px 16px; margin-top: 12px; }
+.focus-lbl { font-family: 'Source Code Pro', monospace; font-size: 9px; text-transform: uppercase; letter-spacing: .1em; color: var(--navy); margin-bottom: 6px; }
+.focus p { font-size: 12.5px; color: var(--fg2); line-height: 1.55; }
+
+/* FOUNDATIONAL DOCS */
+.docs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 24px; }
+.doc-card { border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
+.doc-head { padding: 9px 12px; font-family: 'Libre Baskerville', serif; font-size: 12.5px; font-style: italic; font-weight: 700; }
+.doc-head.navy { background: var(--navy); color: #EDE9DC; }
+.doc-head.red { background: var(--red); color: #EDE9DC; }
+.doc-head.green { background: var(--green); color: #EDE9DC; }
+.doc-head.blue { background: var(--blue); color: #EDE9DC; }
+.doc-head.gold { background: var(--gold); color: #EDE9DC; }
+.doc-body { background: var(--bg2); padding: 10px 12px; font-size: 11.5px; color: var(--fg2); line-height: 1.55; }
+.doc-body dt { font-family: 'Source Code Pro', monospace; font-size: 9px; text-transform: uppercase; letter-spacing: .1em; color: var(--fg); margin-top: 6px; margin-bottom: 2px; }
+
+/* SECTION HEADER */
+.sec-hd { margin: 38px 0 14px; border-bottom: 2px double var(--rule); padding-bottom: 9px; display: flex; align-items: baseline; gap: 12px; }
+.sec-num { font-family: 'Source Code Pro', monospace; font-size: 10px; color: var(--fg2); letter-spacing: .08em; }
+.sec-hd h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(14px, 2.5vw, 19px); font-weight: 700; }
+
+/* THEME BTN */
+.theme-btn { position: sticky; top: max(14px, env(safe-area-inset-top,0px)); float: right; background: var(--bg2); border: 1px solid var(--rule); color: var(--fg); width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center; z-index: 100; }
+
+.footer { border-top: 2px double var(--rule); padding-top: 14px; margin-top: 50px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.footer-left { font-family: 'Libre Baskerville'; font-style: italic; font-size: 12px; color: var(--fg2); }
+.footer-right { font-family: 'Source Code Pro', monospace; font-size: 9px; color: var(--fg2); letter-spacing: .12em; text-align: right; }
+</style>
+
+<button class="theme-btn" id="themeBtn">☀</button>
+
+<div class="page">
+  <div class="cover">
+    <div>
+      <h1>AP U.S. Government<br>&amp; Politics: Study Guide</h1>
+      <p class="cover-sub">ENRICHUTH · RESOURCE 1 OF 2 · ALL 5 UNITS + FOUNDATIONAL DOCUMENTS</p>
+    </div>
+    <div class="cover-seal">AP<br>GOV<br>&amp;<br>POL</div>
+  </div>
+
+  <div class="how-box">
+    <strong>Key to AP Gov success:</strong> Know your required SCOTUS cases AND foundational documents cold — the exam quotes primary sources and asks you to apply them. Understand the <strong>tensions</strong> built into the Constitution: federal vs. state power, majority rule vs. minority rights, executive power vs. Congress. Apply these tensions to current and historical events in your FRQs.
+  </div>
+
+  <!-- UNIT 1 -->
+  <div class="sec-hd"><div class="sec-num">UNIT 01</div><h2>Foundations of American Democracy</h2></div>
+  <div class="unit-card">
+    <div class="unit-hd hd-navy">
+      <div class="unit-num">UNIT 1</div>
+      <div class="unit-title">Foundations of American Democracy</div>
+      <div class="unit-pct">15–22% of Exam</div>
+    </div>
+    <div class="unit-body">
+      <div class="unit-cols">
+        <div>
+          <div class="unit-col-title">Core Concepts</div>
+          <ul class="bullet-list">
+            <li>Natural rights philosophy (Locke: life, liberty, property → Jefferson: pursuit of happiness)</li>
+            <li>Social contract theory: people give up some freedoms for security/order</li>
+            <li>Popular sovereignty, limited government, separation of powers</li>
+            <li>Articles of Confederation: weaknesses (no tax, no army, unanimous amendment)</li>
+            <li>Constitutional Convention 1787: Great Compromise (bicameral Congress)</li>
+            <li>3/5 Compromise (slavery), Electoral College design</li>
+            <li>Federalism: concurrent, enumerated, reserved, implied powers</li>
+            <li>Federalists vs. Anti-Federalists debate (see foundational docs)</li>
+          </ul>
+        </div>
+        <div>
+          <div class="unit-col-title">Required Documents</div>
+          <ul class="bullet-list">
+            <li><strong>Declaration of Independence</strong> — natural rights, grievances, popular sovereignty</li>
+            <li><strong>Articles of Confederation</strong> — weak central gov, states retain power</li>
+            <li><strong>Federalist No. 10</strong> — Madison: factions, large republic as solution</li>
+            <li><strong>Federalist No. 51</strong> — Madison: separation of powers, checks &amp; balances, "ambition must counteract ambition"</li>
+            <li><strong>Brutus No. 1</strong> — Anti-Federalist: federal power threatens liberty, standing army danger</li>
+            <li>Mayflower Compact, Virginia Plan, New Jersey Plan</li>
+          </ul>
+        </div>
+      </div>
+      <div class="terms">
+        <span class="term">Federalism</span><span class="term">Concurrent powers</span><span class="term">Supremacy Clause</span><span class="term">Full Faith & Credit</span><span class="term">Necessary & Proper</span><span class="term">Commerce Clause</span><span class="term">Elastic Clause</span><span class="term">10th Amendment</span>
+      </div>
+      <div class="focus">
+        <div class="focus-lbl">Exam Focus</div>
+        <p>The FRQ almost always asks you to apply Federalist 10 or 51. Key argument: in a large republic, so many factions exist that no single one can dominate — this protects liberty better than small direct democracies. Brutus counters: large republic means citizens lose connection to government. Know both sides.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIT 2 -->
+  <div class="unit-card">
+    <div class="unit-hd hd-red">
+      <div class="unit-num">UNIT 2</div>
+      <div class="unit-title">Interactions Among the Branches</div>
+      <div class="unit-pct">25–36% of Exam</div>
+    </div>
+    <div class="unit-body">
+      <div class="unit-cols">
+        <div>
+          <div class="unit-col-title">Congress</div>
+          <ul class="bullet-list">
+            <li>Bicameral: House (435, proportional, 2yr) + Senate (100, 2/state, 6yr)</li>
+            <li>Enumerated powers: tax, declare war, regulate commerce, coin money</li>
+            <li>House: originates revenue bills, impeachment, Ways &amp; Means Committee</li>
+            <li>Senate: confirms appointments, ratifies treaties, tries impeachment</li>
+            <li>Filibuster (Senate only) — requires 60 votes to invoke cloture</li>
+            <li>Pork barrel spending, logrolling, earmarks</li>
+            <li>Mandatory vs. discretionary spending; debt ceiling</li>
+          </ul>
+        </div>
+        <div>
+          <div class="unit-col-title">President + Courts</div>
+          <ul class="bullet-list">
+            <li>Formal powers: veto, commander-in-chief, treaties, appointments, pardons</li>
+            <li>Informal powers: executive orders, signing statements, bully pulpit</li>
+            <li>War Powers Resolution (1973): 60-day limit without Congressional approval</li>
+            <li>Federal bureaucracy: iron triangles, regulatory agencies, spoils vs. merit</li>
+            <li>Federal courts: constitutional vs. statutory, district → appellate → SCOTUS</li>
+            <li>Judicial review (Marbury v. Madison) — not in Constitution!</li>
+            <li>Stare decisis vs. judicial activism vs. restraint</li>
+            <li>Required SCOTUS: Marbury, Baker v. Carr, Shaw v. Reno, US v. Lopez</li>
+          </ul>
+        </div>
+      </div>
+      <div class="terms">
+        <span class="term">Checks &amp; balances</span><span class="term">Veto</span><span class="term">Override (2/3 vote)</span><span class="term">Pocket veto</span><span class="term">Executive order</span><span class="term">Judicial review</span><span class="term">Iron triangle</span><span class="term">Conference committee</span><span class="term">Gerrymandering</span>
+      </div>
+      <div class="focus">
+        <div class="focus-lbl">Exam Focus</div>
+        <p>Largest unit on the exam. Key comparison: formal vs. informal presidential power. Baker v. Carr established "one person, one vote" (political question can be ruled on); Shaw v. Reno limits racial gerrymandering (racial classification must meet strict scrutiny). US v. Lopez = Congress overreached Commerce Clause (landmark federalism limit).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIT 3 -->
+  <div class="unit-card">
+    <div class="unit-hd hd-green">
+      <div class="unit-num">UNIT 3</div>
+      <div class="unit-title">Civil Liberties &amp; Civil Rights</div>
+      <div class="unit-pct">13–18% of Exam</div>
+    </div>
+    <div class="unit-body">
+      <div class="unit-cols">
+        <div>
+          <div class="unit-col-title">Civil Liberties (Bill of Rights)</div>
+          <ul class="bullet-list">
+            <li>1st Amend: speech (Tinker, Schenck), religion (Engel, Wisconsin v. Yoder), press (NYT v. US)</li>
+            <li>2nd Amend: McDonald v. Chicago — 2nd incorporated to states</li>
+            <li>4th Amend: unreasonable search; exclusionary rule</li>
+            <li>5th Amend: self-incrimination, double jeopardy, due process</li>
+            <li>6th Amend: Gideon v. Wainwright — right to counsel incorporated</li>
+            <li>Selective incorporation via 14th Amendment due process clause</li>
+            <li>Prior restraint: NYT v. US — government cannot stop press pre-publication</li>
+          </ul>
+        </div>
+        <div>
+          <div class="unit-col-title">Civil Rights</div>
+          <ul class="bullet-list">
+            <li>14th Amendment: equal protection, due process against states</li>
+            <li>Brown v. Board (1954): overturns Plessy "separate but equal"</li>
+            <li>Civil Rights Act 1964: bans discrimination by race, color, religion, sex, national origin</li>
+            <li>Voting Rights Act 1965: ends literacy tests, poll taxes</li>
+            <li>Affirmative action debates — strict scrutiny for racial classifications</li>
+            <li>Required doc: MLK Letter from Birmingham Jail — civil disobedience, moral law</li>
+            <li>Women's rights: 19th Amendment, Title IX, Reed v. Reed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="terms">
+        <span class="term">Selective incorporation</span><span class="term">Due process</span><span class="term">Equal protection</span><span class="term">Prior restraint</span><span class="term">Clear &amp; present danger</span><span class="term">Strict scrutiny</span><span class="term">Rational basis</span><span class="term">Exclusionary rule</span>
+      </div>
+      <div class="focus">
+        <div class="focus-lbl">Exam Focus</div>
+        <p>Civil liberties (government vs. individual) vs. civil rights (equal treatment of groups) — know the difference. Tinker v. Des Moines = students have 1st Amendment rights in school (armbands = symbolic speech). Schenck = wartime limits speech. Wisconsin v. Yoder = religious freedom can override compulsory education law (Free Exercise). Engel v. Vitale = no school prayer (Establishment Clause).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIT 4 -->
+  <div class="unit-card">
+    <div class="unit-hd hd-blue">
+      <div class="unit-num">UNIT 4</div>
+      <div class="unit-title">Political Ideologies &amp; Beliefs</div>
+      <div class="unit-pct">10–15% of Exam</div>
+    </div>
+    <div class="unit-body">
+      <div class="unit-cols">
+        <div>
+          <div class="unit-col-title">Political Socialization</div>
+          <ul class="bullet-list">
+            <li>Family is #1 agent of political socialization</li>
+            <li>Other agents: peers, media, school, religion, events</li>
+            <li>Public opinion polling: sampling bias, wording effects, margin of error</li>
+            <li>Generational effects vs. lifecycle effects on ideology</li>
+            <li>Ideological spectrum: liberal → moderate → conservative</li>
+          </ul>
+        </div>
+        <div>
+          <div class="unit-col-title">Ideology &amp; Policy</div>
+          <ul class="bullet-list">
+            <li>Liberals: larger government, social safety net, regulated economy, expanded rights</li>
+            <li>Conservatives: smaller government, free market, traditional values, strong defense</li>
+            <li>Gender gap in voting: women lean more Democratic</li>
+            <li>Racial/ethnic group voting patterns and realignment</li>
+            <li>Linkage institutions: parties, interest groups, media, elections</li>
+          </ul>
+        </div>
+      </div>
+      <div class="terms">
+        <span class="term">Political socialization</span><span class="term">Public opinion</span><span class="term">Sampling error</span><span class="term">Random sample</span><span class="term">Linkage institutions</span><span class="term">Ideology</span><span class="term">Realignment</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIT 5 -->
+  <div class="unit-card">
+    <div class="unit-hd hd-gold">
+      <div class="unit-num">UNIT 5</div>
+      <div class="unit-title">Political Participation</div>
+      <div class="unit-pct">20–27% of Exam</div>
+    </div>
+    <div class="unit-body">
+      <div class="unit-cols">
+        <div>
+          <div class="unit-col-title">Elections &amp; Parties</div>
+          <ul class="bullet-list">
+            <li>Two-party system: plurality voting + winner-take-all creates Duverger's law</li>
+            <li>Primary elections: select party candidates; open vs. closed primaries</li>
+            <li>Electoral College: 538 electors, 270 to win; winner-take-all (most states)</li>
+            <li>Campaign finance: Citizens United v. FEC — unlimited independent expenditures</li>
+            <li>PACs, Super PACs, dark money 501(c)(4)s</li>
+            <li>Third parties: wasted vote problem, spoiler effect</li>
+          </ul>
+        </div>
+        <div>
+          <div class="unit-col-title">Interest Groups &amp; Media</div>
+          <ul class="bullet-list">
+            <li>Interest groups: lobbying, campaign donations, grassroots mobilization</li>
+            <li>Iron triangle: agency + committee + interest group = stable policy network</li>
+            <li>Collective action problem: free rider issue limits civic participation</li>
+            <li>Media: agenda setting, framing, priming — shapes what public thinks is important</li>
+            <li>Social media and political polarization</li>
+            <li>Voter turnout: highest education/income; presidential years higher than midterms</li>
+            <li>Voting rights history: 15th, 19th, 24th, 26th Amendments</li>
+          </ul>
+        </div>
+      </div>
+      <div class="terms">
+        <span class="term">Citizens United</span><span class="term">Super PAC</span><span class="term">Electoral College</span><span class="term">Agenda setting</span><span class="term">Iron triangle</span><span class="term">Free rider</span><span class="term">Voter turnout</span><span class="term">Collective action</span>
+      </div>
+      <div class="focus">
+        <div class="focus-lbl">Exam Focus</div>
+        <p>Citizens United v. FEC (2010) = corporations/unions have 1st Amendment rights → unlimited independent spending on political campaigns. Controversial because it equates money with speech. Know: how the Electoral College advantages swing states; how media framing differs from agenda setting (what to think ABOUT vs. how to think about it).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOUNDATIONAL DOCS -->
+  <div class="sec-hd"><div class="sec-num">REF</div><h2>Required Foundational Documents — Quick Reference</h2></div>
+  <div class="docs-grid">
+    <div class="doc-card">
+      <div class="doc-head navy">Federalist No. 10</div>
+      <div class="doc-body">
+        <dt>Author</dt>James Madison, 1787
+        <dt>Argument</dt>Factions are dangerous but inevitable. A large republic with representative government and separation of powers neutralizes faction better than small direct democracies.
+        <dt>Key Quote</dt>"Liberty is to faction what air is to fire."
+      </div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-head navy">Federalist No. 51</div>
+      <div class="doc-body">
+        <dt>Author</dt>Madison, 1788
+        <dt>Argument</dt>Separation of powers + checks and balances ensure no branch dominates. Federalism gives citizens double security. "Ambition must be made to counteract ambition."
+        <dt>Key Quote</dt>"If men were angels, no government would be necessary."
+      </div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-head red">Federalist No. 70</div>
+      <div class="doc-body">
+        <dt>Author</dt>Alexander Hamilton, 1788
+        <dt>Argument</dt>Energy in the executive is essential. A single president is better than a council — unity, secrecy, decision, dispatch. Single executive is more accountable.
+        <dt>Key Quote</dt>"Energy in the executive is a leading character in the definition of good government."
+      </div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-head red">Federalist No. 78</div>
+      <div class="doc-body">
+        <dt>Author</dt>Hamilton, 1788
+        <dt>Argument</dt>Judiciary is "least dangerous branch" — no sword (enforcement) or purse (spending). Life tenure protects judges from political pressure. Justifies judicial review.
+        <dt>Key Quote</dt>"The courts were designed to be an intermediate body between the people and the legislature."
+      </div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-head green">Brutus No. 1</div>
+      <div class="doc-body">
+        <dt>Author</dt>Robert Yates (?), 1787
+        <dt>Argument</dt>Anti-Federalist warning: federal power under the new Constitution is too vast, will absorb state power, standing army threatens liberty, large republic means citizens lose government.
+        <dt>Key Quote</dt>"It appears from these articles that there is no need of any intervention of the state governments."
+      </div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-head blue">Letter from Birmingham Jail</div>
+      <div class="doc-body">
+        <dt>Author</dt>Martin Luther King Jr., 1963
+        <dt>Argument</dt>Unjust laws need not be obeyed — there is a moral law above civil law. Civil disobedience is justified when channels of change are closed. Urgency of "now."
+        <dt>Key Quote</dt>"One has not only a legal but a moral responsibility to obey just laws. Conversely, one has a moral responsibility to disobey unjust laws."
+      </div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-head gold">Declaration of Independence</div>
+      <div class="doc-body">
+        <dt>Author</dt>Jefferson, 1776
+        <dt>Argument</dt>Locke's natural rights. Government derives power from consent of governed. When government violates rights, people may abolish it.
+        <dt>Key Quote</dt>"We hold these truths to be self-evident, that all men are created equal…"
+      </div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-head gold">Articles of Confederation</div>
+      <div class="doc-body">
+        <dt>Adopted</dt>1777 (ratified 1781)
+        <dt>Weaknesses</dt>No power to tax directly, no national currency, no executive branch, no ability to regulate commerce, unanimous vote required for amendments.
+        <dt>Why replaced</dt>Shays' Rebellion showed weakness of central government.
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">Enrichuth · Decorate &amp; make it yours ✦</div>
+    <div class="footer-right">AP GOV · STUDY GUIDE · RESOURCE 1</div>
+  </div>
+</div>
+
+<script>
+const btn = document.getElementById('themeBtn');
+let theme = (() => { try { return localStorage.getItem('apgov-theme') || 'system'; } catch { return 'system'; } })();
+function applyTheme(t) {
+  document.documentElement.removeAttribute('data-theme');
+  if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+  btn.textContent = t === 'dark' ? '☀' : t === 'light' ? '◑' : '☾';
+}
+applyTheme(theme);
+btn.addEventListener('click', () => {
+  theme = theme === 'system' ? 'dark' : theme === 'dark' ? 'light' : 'system';
+  try { localStorage.setItem('apgov-theme', theme); } catch {}
+  applyTheme(theme);
+});
+</script>
+
+</body></html>
